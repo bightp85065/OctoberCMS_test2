@@ -1,0 +1,42 @@
+<form>
+   <h2>{{ __SELF__.property('name') }}</h2>
+   <div><h4>{{ __SELF__.property('description') }}</h4></div>
+   <input id="number1" type="number">
+   
+   <button
+       class="button"
+       data-item-id="{{ __SELF__.property('plusId') }}"
+       data-item-name="{{ __SELF__.property('plusName') }}"
+       data-item-description="{{ __SELF__.property('plusDescription')}}">
+   {{__SELF__.property('plusHtml')}}
+   </button>
+   <button
+       data-request="{{ __SELF__ }}::onDoMinus"
+       class="button"
+       data-item-id="{{ __SELF__.property('minusId') }}"
+       data-item-name="{{ __SELF__.property('minusName') }}"
+       data-item-description="{{ __SELF__.property('minusDescription')}}">
+   {{__SELF__.property('minusHtml')}}
+   </button>
+   <button
+       class="button"
+       data-item-id="{{ __SELF__.property('multiplyId') }}"
+       data-item-name="{{ __SELF__.property('multiplyName') }}"
+       data-item-description="{{ __SELF__.property('multiplyDescription')}}">
+   {{__SELF__.property('multiplyHtml')}}
+   </button>
+   <button
+       class="button"
+       data-item-id="{{ __SELF__.property('dividedId') }}"
+       data-item-name="{{ __SELF__.property('dividedName') }}"
+       data-item-description="{{ __SELF__.property('dividedDescription')}}">
+   {{__SELF__.property('dividedHtml')}}
+   </button>
+   
+   <input id="number2" type="number">
+   AWS:<p class="snipcart-add-item"
+       data-item-id="{{ __SELF__.property('awsId') }}"
+       data-item-name="{{ __SELF__.property('awsName') }}"
+       data-item-description="{{ __SELF__.property('awsDescription')}}">
+   </p>
+</form>
