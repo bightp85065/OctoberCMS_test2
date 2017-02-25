@@ -3,47 +3,54 @@
 use Model;
 class Calculate extends Model
 {
-    public $callback = array("success"=>false,"data"=>0);
+    private $callback;
+
+    public function __construct(array $attributes = [])
+    {
+        $this->callback = array("success"=>false,"data"=>0);
+
+        parent::__construct();
+    }
     /**
      * Sends the confirmation email to a user, after activating.
      * @param  string $code
      * @return void
      */
     
-    public static function plus($number1,$number2)
+    public function plus($number1,$number2)
     {
         if (!isset($number1)||!isset($number2)) {
-            return $callback;
+            return $this->callback;
         }
-        $callback["data"]=$number1+$number2;
-        return $callback;
+        $this->callback["data"]=$number1+$number2;
+        return $this->callback;
     }
     
-    public static function minus($number1,$number2)
+    public function minus($number1,$number2)
     {
         if (!isset($number1)||!isset($number2)) {
-            return $callback;
+            return $this->callback;
         }
-        $callback["data"]=$number1-$number2;
-        return $callback;
+        $this->callback["data"]=$number1-$number2;
+        return  $this->callback;
     }
     
-    public static function multiply($number1,$number2)
+    public function multiply($number1,$number2)
     {
         if (!isset($number1)||!isset($number2)) {
-            return $callback;
+            return  $this->callback;
         }
-        $callback["data"]=$number1*$number2;
-        return $callback;
+        $this->callback["data"]=$number1*$number2;
+        return  $this->callback;
     }
     
-    public static function divided($number1,$number2)
+    public function divided($number1,$number2)
     {
         if (!isset($number1)||!isset($number2)||$number2===0) {
-            return $callback;
+            return  $this->callback;
         }
-        $callback["data"]=$number1/$number2;
-        return $callback;
+        $this->callback["data"]=$number1/$number2;
+        return  $this->callback;
     }
 
 }
