@@ -1,4 +1,4 @@
-<?php namespace boHan2\calculator\Models;
+<?php namespace Bohan\Calculator\Models;
 
 use Model;
 class Calculate extends Model

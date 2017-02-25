@@ -1,8 +1,8 @@
-<?php namespace bohan2\calculator\Components;
+<?php namespace Bohan\Calculator\Components;
 
 use Cms\Classes\ComponentBase;
-use boHan2\calculator\models\Settings;
-use boHan2\calculator\models\Calculate as CalculateModel;
+use Bohan\Calculator\Models\Settings;
+use Bohan\Calculator\Models\Calculate as CalculateModel;
 
 class Calculator extends ComponentBase
 {
@@ -16,7 +16,7 @@ class Calculator extends ComponentBase
 
     public function defineProperties()
     {
-//        return [];
+        return [];
     }
 
     public function onDoPlus(){
@@ -41,6 +41,6 @@ class Calculator extends ComponentBase
     }
     
     public function onRun() {
-	    $this->addJs('/plugins/bohan2/calculator/assets/js/calculator.js');
+	    $this->addJs('/plugins/bohan/calculator/assets/js/calculator.js');
     }
 }

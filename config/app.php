@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'http://bohan.5.cadence-labs.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => 'zsBP2qTGFp65K6uoCv1vRDg6pZ4v80O1',
+    'key' => 'Szs2ZVXwMRoHwq4KYSbgb1fmMK8EMxhO',
 
     'cipher' => 'AES-256-CBC',
 

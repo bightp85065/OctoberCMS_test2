@@ -1,4 +1,4 @@
-<?php namespace bohan2\calculator;
+<?php namespace Bohan\Calculator;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -18,7 +18,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'calculator',
             'description' => 'No description provided yet...',
-            'author'      => 'bohan2',
+            'author'      => 'bohan',
             'icon'        => 'icon-leaf'
         ];
     }
@@ -51,7 +51,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'bohan2\calculator\Components\Calculator' => 'bohanCalculator',
+            'Bohan\Calculator\Components\Calculator' => 'bohanCalculator',
         ];
     }
 
@@ -65,7 +65,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'bohan2.calculator.some_permission' => [
+            'bohan.calculator.some_permission' => [
                 'tab' => 'calculator',
                 'label' => 'Some permission'
             ],
@@ -84,9 +84,9 @@ class Plugin extends PluginBase
         return [
             'calculator' => [
                 'label'       => 'calculator',
-                'url'         => Backend::url('bohan2/calculator/calculator'),
+                'url'         => Backend::url('bohan/calculator/calculator'),
                 'icon'        => 'icon-leaf',
-                'permissions' => ['bohan2.calculator.*'],
+                'permissions' => ['bohan.calculator.*'],
                 'order'       => 500,
             ],
         ];

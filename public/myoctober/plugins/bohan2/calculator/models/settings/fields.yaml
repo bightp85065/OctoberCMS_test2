@@ -1,8 +1,0 @@
-# ===================================
-#  Field Definitions
-# ===================================
-
-fields:
-    api_key:
-        label: Api Key
-        description: Enter your api key

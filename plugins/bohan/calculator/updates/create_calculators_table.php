@@ -1,4 +1,4 @@
-<?php namespace Bohan\Calculator\Updates;
+<?php namespace bohan\calculator\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -8,7 +8,7 @@ class CreateCalculatorsTable extends Migration
 {
     public function up()
     {
-        Schema::create('jaychow_demo_calculators', function(Blueprint $table) {
+        Schema::create('bohan_calculator_calculators', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
@@ -17,6 +17,6 @@ class CreateCalculatorsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('jaychow_demo_calculators');
+        Schema::dropIfExists('bohan_calculator_calculators');
     }
 }
